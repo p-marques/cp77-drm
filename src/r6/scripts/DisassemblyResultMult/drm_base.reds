@@ -1,6 +1,3 @@
-// Disassembly Result Multiplier by pMarK
-// v1.1
-
 module DisassemblyResultMult.Base
 
 public class DRM {
@@ -50,15 +47,15 @@ public class DRM {
         // Default = 1.0;
         this.materialsMultiplierLegendary = 1.0;
 
-        // Chance to reveive materials that are one quality up of the disassembled item.
-        // The dice roll from that perk happens before this one. The chance in that perk is 0.15 (15%).
+        // Chance to receive materials that are one quality up of the disassembled item.
+        // This is independent of any perks.
         // Default = 0.0;
         this.chanceToAddMaterialsOneQualityUp = 0.0;
 
         // ------ Settings End ------
     }
 
-    public func ModifyQuantities(out values : array<IngredientData>) -> Void {
+    public func ModifyQuantities(out values: array<IngredientData>) -> Void {
         let i: Int32 = 0;
         let k: Int32;
         let size: Int32 = ArraySize(values);
